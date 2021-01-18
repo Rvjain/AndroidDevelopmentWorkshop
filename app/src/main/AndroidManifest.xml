@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.metrohacks.metrohackexample">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
@@ -24,7 +23,6 @@
         <activity android:name=".serviceapp.ServiceMainActivity" />
         <activity android:name=".contactsapp.AddDetailsActivity" />
         <activity android:name=".serviceapp.ThreadActivity" />
-        <activity android:name=".receiverapp.ReceiverMainActivity" />
         <activity android:name=".contactsapp.ContactsMainActivity" />
 
         <service

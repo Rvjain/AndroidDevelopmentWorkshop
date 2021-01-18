@@ -37,21 +37,9 @@
         android:layout_marginTop="10dp"
         android:onClick="startServiceApp"
         android:text="Service App"
-        app:layout_constraintBottom_toTopOf="@id/receiverapp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contactapp" />
-
-    <Button
-        android:id="@+id/receiverapp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:onClick="startReceiverApp"
-        android:text="Recevier App"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serviceapp" />
 
     <Button
         android:id="@+id/styleApp"

@@ -21,7 +21,6 @@ import com.metrohacks.metrohackexample.R;
 public class ExampleIntentService extends IntentService {
 
     final String TAG = "ExampleIntentService";
-    private PowerManager.WakeLock wakeLock;
     public ExampleIntentService() {
         super("ExampleIntentService");
     }
@@ -31,24 +30,24 @@ public class ExampleIntentService extends IntentService {
         super.onCreate();
         Log.d(TAG, "onCreate");
 
-        startForeground(1, createNotification());
+        // TODO Step 22: Start the service in the foreground
+        //startForeground(1, createNotification());
     }
 
+    // TODO Step 21: Perform the long running operation in service
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        Log.d(TAG, "onHandleIntent");
-        String input = intent != null ? intent.getStringExtra("inputExtra") : "";
-        for (int i = 0; i < 10; i++) {
-            Log.d(TAG, input + " - " + i);
-            SystemClock.sleep(1500);
-        }
+//        Log.d(TAG, "onHandleIntent");
+//        String input = intent != null ? intent.getStringExtra("inputExtra") : "";
+//        longRunningOperation(input);
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG, "onDestroy");
-    }
+    // TODO Step 23: Log when the service is destroyed
+//    @Override
+//    public void onDestroy() {
+//        super.onDestroy();
+//        Log.d(TAG, "onDestroy");
+//    }
 
     private Notification createNotification() {
         String channelId = "100";
@@ -74,5 +73,12 @@ public class ExampleIntentService extends IntentService {
         NotificationManager service = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         service.createNotificationChannel(chan);
         return channelId;
+    }
+
+    private void longRunningOperation(String input) {
+        for (int i = 0; i < 10; i++) {
+            Log.d(TAG, input + " - " + i);
+            SystemClock.sleep(1500);
+        }
     }
 }
