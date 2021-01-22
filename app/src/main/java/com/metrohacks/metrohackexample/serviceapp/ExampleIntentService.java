@@ -30,11 +30,11 @@ public class ExampleIntentService extends IntentService {
         super.onCreate();
         Log.d(TAG, "onCreate");
 
-        // TODO Step 21: Start the service in the foreground
+        // TODO Step 22: Start the service in the foreground
         //startForeground(1, createNotification());
     }
 
-    // TODO Step 22: Perform the long running operation in service
+    // TODO Step 23: Perform the long running operation in service
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
 //        Log.d(TAG, "onHandleIntent");
@@ -42,7 +42,7 @@ public class ExampleIntentService extends IntentService {
 //        longRunningOperation(input);
     }
 
-    // TODO Step 23: Log when the service is destroyed
+    // TODO Step 24: Log when the service is destroyed
 //    @Override
 //    public void onDestroy() {
 //        super.onDestroy();
