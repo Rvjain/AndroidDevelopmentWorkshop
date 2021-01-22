@@ -27,7 +27,7 @@ public class ServiceMainActivity extends AppCompatActivity {
     }
 
     public void startBoundServiceActivity(View view) {
-        Intent intent = new Intent(ServiceMainActivity.this, ExampleBoundService.class);
+        Intent intent = new Intent(ServiceMainActivity.this, ExampleBoundServiceActivity.class);
         startActivity(intent);
     }
 }
