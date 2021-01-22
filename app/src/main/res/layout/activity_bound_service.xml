@@ -28,25 +28,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_serviceText" />
 
-    <Button
-        android:id="@+id/btn_counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="incrementCounter"
-        android:text="Increment"
-        app:layout_constraintEnd_toEndOf="@+id/btn_changeText"
-        app:layout_constraintStart_toStartOf="@+id/btn_changeText"
-        app:layout_constraintTop_toBottomOf="@+id/btn_changeText" />
-
-    <TextView
-        android:id="@+id/tv_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_counter"
-        app:layout_constraintStart_toEndOf="@+id/btn_counter"
-        app:layout_constraintTop_toTopOf="@+id/btn_counter" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
