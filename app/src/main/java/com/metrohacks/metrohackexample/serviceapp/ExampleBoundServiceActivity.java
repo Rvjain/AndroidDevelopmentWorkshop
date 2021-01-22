@@ -39,8 +39,8 @@ public class ExampleBoundServiceActivity extends AppCompatActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder binder) {
             Log.d(TAG, "onServiceConnected");
-            ExampleBoundService.LocalBinder binder1 = (ExampleBoundService.LocalBinder) binder;
-            boundService = binder1.getService();
+            ExampleBoundService.LocalBinder serviceBinder = (ExampleBoundService.LocalBinder) binder;
+            boundService = serviceBinder.getService();
         }
 
         @Override
