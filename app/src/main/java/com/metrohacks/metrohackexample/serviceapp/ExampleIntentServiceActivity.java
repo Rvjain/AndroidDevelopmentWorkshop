@@ -17,12 +17,12 @@ public class ExampleIntentServiceActivity extends AppCompatActivity {
 
         // TODO Step 24: Start the foreground service with an intent and provide extra data.
         // After this Run the app and test.
-//        Intent intent = new Intent(this, ExampleIntentService.class);
-//        intent.putExtra("inputExtra", "Hello Service");
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-//            startForegroundService(intent);
-//        } else {
-//            startService(intent);
-//        }
+        Intent intent = new Intent(this, ExampleIntentService.class);
+        intent.putExtra("inputExtra", "Hello Service");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent);
+        } else {
+            startService(intent);
+        }
     }
 }

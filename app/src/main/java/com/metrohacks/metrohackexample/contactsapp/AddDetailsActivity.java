@@ -34,14 +34,14 @@ public class AddDetailsActivity extends AppCompatActivity {
 
     // TODO Step 11: Display the name from which this activity received from `ContactMainActivity`
     private void displayName() {
-//        Intent intent = getIntent();
-//        if (intent == null) {
-//            Toast.makeText(AddDetailsActivity.this, "No intent provided to the activity", Toast.LENGTH_SHORT).show();
-//            return;
-//        }
-//
-//        String name = intent.getStringExtra("Name_Extra");
-//        tvName.setText(name);
+        Intent intent = getIntent();
+        if (intent == null) {
+            Toast.makeText(AddDetailsActivity.this, "No intent provided to the activity", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String name = intent.getStringExtra("Name_Extra");
+        tvName.setText(name);
     }
 
     // TODO Step 12: Send the name, phone number and address back to `ContactMainActivity`
@@ -60,12 +60,12 @@ public class AddDetailsActivity extends AppCompatActivity {
             return;
         }
 
-//        Intent intent = new Intent();
-//        intent.putExtra("Name_Extra", tvName.getText().toString());
-//        intent.putExtra("Phone_Extra", phone);
-//        intent.putExtra("Address_Extra", address);
-//
-//        setResult(RESULT_OK, intent);
-//        finish();
+        Intent intent = new Intent();
+        intent.putExtra("Name_Extra", tvName.getText().toString());
+        intent.putExtra("Phone_Extra", phone);
+        intent.putExtra("Address_Extra", address);
+
+        setResult(RESULT_OK, intent);
+        finish();
     }
 }

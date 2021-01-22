@@ -27,8 +27,8 @@ public class ThreadActivity extends AppCompatActivity {
     // Before this step run the app to check the code without thread
     // TODO Step 17: Update the code to run the code without causing any lags on the UI.
     public void changeText(View view) {
-        codeWithoutThread();
-        //codeWithThread();
+        //codeWithoutThread();
+        codeWithThread();
     }
 
     // This code increment the count value by 1 and updates the counter `tvCount` TextView
@@ -49,25 +49,25 @@ public class ThreadActivity extends AppCompatActivity {
         final Handler handler = new Handler();
 
         // TODO Step 18: Create Runnable object for a new thread and perform the
-//        Runnable r = new Runnable() {
-//            @Override
-//            public void run() {
-//                longWaitingOperation();
-//
-//                // TODO Step 20: Using Handler to update the after the long running operation
-////                handler.post(new Runnable() {
-////                    @Override
-////                    public void run() {
-////                        tvHello.setText("Hi Folks!");
-////                    }
-////                });
-//            }
-//        };
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                longWaitingOperation();
+
+                // TODO Step 20: Using Handler to update the after the long running operation
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        tvHello.setText("Hi Folks!");
+                    }
+                });
+            }
+        };
 
         // TODO Step 19: Start the thread with the newly created runnable
         // After this step run the app
-//        Thread thread = new Thread(r);
-//        thread.start();
+        Thread thread = new Thread(r);
+        thread.start();
     }
 
     private void longWaitingOperation() {

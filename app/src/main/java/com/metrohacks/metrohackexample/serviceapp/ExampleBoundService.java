@@ -14,7 +14,7 @@ public class ExampleBoundService extends Service {
     final String TAG = "ExampleIntentService";
 
     // TODO Step 26: Create the implementation of IBinder using the LocalBinder
-    //private final IBinder serviceBinder = new LocalBinder();
+    private final IBinder serviceBinder = new LocalBinder();
 
     public ExampleBoundService() {}
 
@@ -26,8 +26,8 @@ public class ExampleBoundService extends Service {
     // TODO Step 27: Bind the activity with the service by returning the IBinder implementation
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
-        //return serviceBinder;
+        //return null;
+        return serviceBinder;
     }
 
     @Override
@@ -37,9 +37,9 @@ public class ExampleBoundService extends Service {
     }
 
     // TODO Step 25: Create the binder class to return the service
-//    class LocalBinder extends Binder {
-//        ExampleBoundService getService() {
-//            return ExampleBoundService.this;
-//        }
-//    }
+    class LocalBinder extends Binder {
+        ExampleBoundService getService() {
+            return ExampleBoundService.this;
+        }
+    }
  }
